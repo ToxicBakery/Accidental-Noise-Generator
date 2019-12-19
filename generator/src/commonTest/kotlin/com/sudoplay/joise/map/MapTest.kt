@@ -1,12 +1,12 @@
 package com.sudoplay.joise.map
 
 import com.sudoplay.joise.generator.LCG
-import com.sudoplay.joise.module.*
+import com.sudoplay.joise.module.Module
+import com.sudoplay.joise.module.ModuleAbs
+import com.sudoplay.joise.module.ModuleBasisFunction
 import com.sudoplay.joise.module.ModuleBasisFunction.BasisType
 import com.sudoplay.joise.module.ModuleBasisFunction.InterpolationType
-import com.sudoplay.joise.module.ModuleCombiner.CombinerType
-import com.sudoplay.joise.module.ModuleFractal.FractalType
-import com.sudoplay.joise.module.ModuleFunctionGradient.FunctionGradientAxis
+import com.sudoplay.joise.module.SeedableModule
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
