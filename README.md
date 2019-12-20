@@ -1,4 +1,4 @@
-# Joise
+# Joise [![CircleCI](https://circleci.com/gh/ToxicBakery/Accidental-Noise-Generator.svg?style=svg)](https://circleci.com/gh/ToxicBakery/Accidental-Noise-Generator) [![Maven Central](https://img.shields.io/maven-central/v/com.ToxicBakery.library.noise/generator.svg)](https://oss.sonatype.org/content/repositories/releases/com/ToxicBakery/library/noise/) [![Maven Central](https://img.shields.io/maven-metadata/v/https/oss.sonatype.org/content/repositories/snapshots/com/ToxicBakery/library/noise/generator/maven-metadata.xml.svg)](https://oss.sonatype.org/content/repositories/snapshots/com/ToxicBakery/library/noise/)
 Joise is a 2D, 3D, 4D and 6D modular noise library written in Kotlin multiplatform and compiled for Java and JavaScript
 
 Joise is derived from Joshua Tippetts' [Accidental Noise Library](http://accidentalnoise.sourceforge.net/index.html) written in C++ and ported directly from [Joise for Java](https://github.com/AlrikG/AccidentalNoiseLibraryForJava).
