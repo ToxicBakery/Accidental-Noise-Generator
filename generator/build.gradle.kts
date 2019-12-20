@@ -64,20 +64,7 @@ tasks {
     val dokka by getting(DokkaTask::class) {
         outputFormat = "html"
         outputDirectory = "${project.projectDir}/gh-pages"
-        multiplatform {
-            val common by creating {
-                targets = listOf("Common")
-                platform = "common"
-            }
-            val js by creating {
-                targets = listOf("Js")
-                platform = "js"
-            }
-            val jvm by creating {
-                targets = listOf("Jvm")
-                platform = "jvm"
-            }
-        }
+        multiplatform {}
         doLast {
             File(outputDirectory, "CNAME")
                 .writeText("accidental-noise-generator.toxicbakery.dev")
@@ -90,63 +77,42 @@ tasks {
 tasks.register("dokkaCommon", DokkaTask::class) {
     outputFormat = "html"
     outputDirectory = "$buildDir/javadoc/common"
-    multiplatform {
-        val common by creating {
-            targets = listOf("Common")
-            platform = "common"
-        }
-    }
+    multiplatform {}
 }
 
 tasks.register("dokkaJvm", DokkaTask::class) {
     outputFormat = "html"
     outputDirectory = "$buildDir/javadoc/jvm"
-    multiplatform {
-        val common by creating {
-            targets = listOf("Common")
-            platform = "common"
-        }
-        val jvm by creating {
-            targets = listOf("Jvm")
-            platform = "jvm"
-        }
-    }
+    multiplatform {}
 }
 
 tasks.register("dokkaJs", DokkaTask::class) {
     outputFormat = "html"
     outputDirectory = "$buildDir/javadoc/js"
-    multiplatform {
-        val common by creating {
-            targets = listOf("Common")
-            platform = "common"
-        }
-        val js by creating {
-            targets = listOf("Js")
-            platform = "js"
-        }
-    }
+    multiplatform {}
 }
 
-tasks.register("emptySourcesJar", Jar::class) {
+val emptySourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
 }
 
-tasks.register("emptyJavadocJar", Jar::class) {
+val emptyJavadocJar by tasks.registering(Jar::class) {
     archiveClassifier.set("javadoc")
 }
 
-tasks.register("dokkaJavadocCommonJar", Jar::class) {
+val dokkaJavadocCommonJar by tasks.registering(Jar::class) {
     dependsOn("dokkaCommon")
     from("$buildDir/javadoc/common")
 }
 
-tasks.register("dokkaJavadocJsJar", Jar::class) {
+val dokkaJavadocJsJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("javadoc")
     dependsOn("dokkaJs")
     from("$buildDir/javadoc/js")
 }
 
-tasks.register("dokkaJavadocJvmJar", Jar::class) {
+val dokkaJavadocJvmJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("javadoc")
     dependsOn("dokkaJvm")
     from("$buildDir/javadoc/jvm")
 }
@@ -194,6 +160,11 @@ publishing {
                 }
             }
         }
+
+        when (name) {
+            "jvm" -> artifact(dokkaJavadocJvmJar.get())
+            "js" -> artifact(dokkaJavadocJsJar.get())
+        }
     }
 
     repositories {
@@ -202,11 +173,18 @@ publishing {
         val sonatypeUsername = System.getenv("SONATYPE_USERNAME") ?: ""
         val sonatypePassword = System.getenv("SONATYPE_PASSWORD") ?: ""
         maven {
-            url = if (!version.toString().contains("SNAPSHOT")) releaseUrl else snapshotUrl
+            url = if (version.toString().endsWith("SNAPSHOT")) snapshotUrl else releaseUrl
             credentials {
                 username = if (sonatypeUsername.isBlank()) "" else sonatypeUsername
                 password = if (sonatypePassword.isBlank()) "" else sonatypePassword
             }
         }
+    }
+}
+
+if (!version.toString().endsWith("SNAPSHOT")) {
+    signing {
+        isRequired = false
+        sign(publishing.publications)
     }
 }
