@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BasePRNG - generator</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">generator</a>&nbsp;/&nbsp;<a href="../index.html">com.sudoplay.joise.generator</a>&nbsp;/&nbsp;<a href="./index.html">BasePRNG</a><br/>
+<br/>
+<h1>BasePRNG</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BasePRNG</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">BasePRNG</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get01.html">get01</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get01</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-range.html">getRange</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRange</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.generator.BasePRNG$getRange(kotlin.Int, kotlin.Int)/low">low</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.generator.BasePRNG$getRange(kotlin.Int, kotlin.Int)/high">high</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-target.html">getTarget</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTarget</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.generator.BasePRNG$getTarget(kotlin.Int)/t">t</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-seed.html">setSeed</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setSeed</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.generator.BasePRNG$setSeed(kotlin.Long)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-c-m-w-c4096/index.html">CMWC4096</a></h4>
+</td>
+<td>
+<p>Complimentary multiply with carry.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CMWC4096</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BasePRNG</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-k-i-s-s/index.html">KISS</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">KISS</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BasePRNG</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-l-c-g/index.html">LCG</a></h4>
+</td>
+<td>
+<p>Linear congruential generator.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LCG</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BasePRNG</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-m-w-c/index.html">MWC</a></h4>
+</td>
+<td>
+<p>Multiply with carry.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MWC</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BasePRNG</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-m-w-c256/index.html">MWC256</a></h4>
+</td>
+<td>
+<p>Multiply with carry.</p>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MWC256</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BasePRNG</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-x-o-r-shift/index.html">XORShift</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XORShift</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BasePRNG</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

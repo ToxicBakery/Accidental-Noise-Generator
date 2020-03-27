@@ -1,0 +1,8 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.sudoplay.joise.generator
+com.sudoplay.joise.mapping
+com.sudoplay.joise.module
+com.sudoplay.joise.noise
+com.sudoplay.util

@@ -1,0 +1,170 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ModuleBasisFunction - generator</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">generator</a>&nbsp;/&nbsp;<a href="../index.html">com.sudoplay.joise.module</a>&nbsp;/&nbsp;<a href="./index.html">ModuleBasisFunction</a><br/>
+<br/>
+<h1>ModuleBasisFunction</h1>
+<code><span class="keyword">class </span><span class="identifier">ModuleBasisFunction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-seedable-module/index.html"><span class="identifier">SeedableModule</span></a></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-basis-type/index.html">BasisType</a></h4>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">BasisType</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-interpolation-type/index.html">InterpolationType</a></h4>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">InterpolationType</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">ModuleBasisFunction</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$<init>(com.sudoplay.joise.module.ModuleBasisFunction.BasisType, com.sudoplay.joise.module.ModuleBasisFunction.InterpolationType, kotlin.Long)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasisType</span>&nbsp;<span class="symbol">=</span>&nbsp;BasisType.GRADIENT<span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$<init>(com.sudoplay.joise.module.ModuleBasisFunction.BasisType, com.sudoplay.joise.module.ModuleBasisFunction.InterpolationType, kotlin.Long)/interpolationType">interpolationType</span><span class="symbol">:</span>&nbsp;<span class="identifier">InterpolationType</span>&nbsp;<span class="symbol">=</span>&nbsp;InterpolationType.QUINTIC<span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$<init>(com.sudoplay.joise.module.ModuleBasisFunction.BasisType, com.sudoplay.joise.module.ModuleBasisFunction.InterpolationType, kotlin.Long)/seed">seed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;10000L<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="basis-type.html">basisType</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">basisType</span><span class="symbol">: </span><span class="identifier">BasisType</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="cos2d.html">cos2d</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cos2d</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="func2-d.html">func2D</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">func2D</span><span class="symbol">: </span><span class="identifier">Function2D</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="func3-d.html">func3D</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">func3D</span><span class="symbol">: </span><span class="identifier">Function3D</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="func4-d.html">func4D</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">func4D</span><span class="symbol">: </span><span class="identifier">Function4D</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="func6-d.html">func6D</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">func6D</span><span class="symbol">: </span><span class="identifier">Function6D</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="interpolation-type.html">interpolationType</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">interpolationType</span><span class="symbol">: </span><span class="identifier">InterpolationType</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="interpolator.html">interpolator</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">interpolator</span><span class="symbol">: </span><a href="../../com.sudoplay.joise.noise/-interpolator/index.html"><span class="identifier">Interpolator</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="offset.html">offset</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">offset</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double-array/index.html"><span class="identifier">DoubleArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rot-matrix.html">rotMatrix</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">rotMatrix</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double-array/index.html"><span class="identifier">DoubleArray</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scale.html">scale</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">scale</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double-array/index.html"><span class="identifier">DoubleArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="seed.html">seed</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">seed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="sin2d.html">sin2d</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sin2d</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get.html">get</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double)/z">z</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/z">z</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/w">w</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/z">z</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/w">w</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/u">u</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$get(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/v">v</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-magic-numbers.html">setMagicNumbers</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMagicNumbers</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$setMagicNumbers(com.sudoplay.joise.module.ModuleBasisFunction.BasisType)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">BasisType</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="set-rotation-angle.html">setRotationAngle</a></h4>
+</td>
+<td>
+<p>Set the rotation axis and angle to use for 3D, 4D and 6D noise.</p>
+<code><span class="keyword">fun </span><span class="identifier">setRotationAngle</span><span class="symbol">(</span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$setRotationAngle(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$setRotationAngle(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$setRotationAngle(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/z">z</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">, </span><span class="identifier" id="com.sudoplay.joise.module.ModuleBasisFunction$setRotationAngle(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/angle">angle</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
